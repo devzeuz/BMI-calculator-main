@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>BMI Calculator</h1>
+    <div class="pg-0">
+      <div class="pg-1">
+        <div class="input-div">
+          <input
+            type="text"
+            id="kg"
+            value=""
+            placeholder="Convert Kilogram (KG) to Pounds (LBS)"
+          /><span><button id="kg-btn">Enter</button></span><br />
+
+          <p id="yourP"></p>
+        </div>
+
+        <div class="feet">
+          <input
+            type="text"
+            id="ft"
+            value=""
+            placeholder="Convert Feet (ft), To Centimetres (cm)"
+          /><span><button id="ft-btn">enter</button></span><br />
+
+          <p id="yourft"></p>
+        </div>
+      </div>
+      <div class="input-div-2">
+        <span></span>
+        <input
+          type="text"
+          id="weight"
+          placeholder="Input your weight in pounds (LBS)"
+          value=""
+        /><br />
+
+        <span> </span
+        ><input
+          type="text"
+          id="height"
+          value=""
+          placeholder="Input your heigth in Centimetres (Cm)"
+        /><br />
+
+        <div id="diagrop">
+          <p id="head-text"></p>
+          <p id="diag"></p>
+        </div>
+      </div>
+
+      <div class="classic">
+        <button id="btn-calc">Calculate</button>
+        <button id="btn-clr" onClick="reload()">Clear</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>Designed & Developed by Barbwire Dev (Bd)</p>
+      copyright &copy; 2023 Bd.
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
