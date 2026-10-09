@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbwire Work</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator | Barbwire Work</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
     <h1>BMI Calculator</h1>
-    <div class="pg-0">
-      <div class="pg-1">
-        <div class="input-div">
-          <input
-            type="text"
-            id="kg"
-            value=""
-            placeholder="Convert Kilogram (KG) to Pounds (LBS)"
-          /><span><button id="kg-btn">Enter</button></span><br />
+  </header>
 
-          <p id="yourP"></p>
+  <main class="pg-0">
+    <!-- Quick Unit Converters -->
+    <section class="pg-1" aria-label="Unit Converters">
+      <div class="input-div">
+        <label for="kg" class="visually-hidden">Convert Kilograms (kg) to Pounds (lbs)</label>
+        <div class="input-action-row">
+          <input type="number" id="kg" step="any" min="0" placeholder="Convert Kilogram (kg) to Pounds (lbs)"
+            aria-label="Kilograms to pounds converter input" />
+          <button id="kg-btn" type="button">Enter</button>
         </div>
-
-        <div class="feet">
-          <input
-            type="text"
-            id="ft"
-            value=""
-            placeholder="Convert Feet (ft), To Centimetres (cm)"
-          /><span><button id="ft-btn">enter</button></span><br />
-
-          <p id="yourft"></p>
-        </div>
-      </div>
-      <div class="input-div-2">
-        <span></span>
-        <input
-          type="text"
-          id="weight"
-          placeholder="Input your weight in pounds (LBS)"
-          value=""
-        /><br />
-
-        <span> </span
-        ><input
-          type="text"
-          id="height"
-          value=""
-          placeholder="Input your heigth in Centimetres (Cm)"
-        /><br />
-
-        <div id="diagrop">
-          <p id="head-text"></p>
-          <p id="diag"></p>
-        </div>
+        <p id="yourP" class="convert-output" role="status" aria-live="polite"></p>
       </div>
 
-      <div class="classic">
-        <button id="btn-calc">Calculate</button>
-        <button id="btn-clr" onClick="reload()">Clear</button>
+      <div class="feet">
+        <label for="ft" class="visually-hidden">Convert Feet & Inches to Centimeters (cm)</label>
+        <div class="input-action-row">
+          <input type="text" id="ft" placeholder="Convert Feet (e.g. 5'10) to Centimeters (cm)"
+            aria-label="Feet and inches to centimeters converter input" />
+          <button id="ft-btn" type="button">Enter</button>
+        </div>
+        <p id="yourft" class="convert-output" role="status" aria-live="polite"></p>
       </div>
+    </section>
+
+    <!-- Main BMI Inputs -->
+    <section class="input-div-2" aria-label="BMI Input Fields">
+      <div class="field-group">
+        <label for="weight" class="visually-hidden">Weight in pounds</label>
+        <input type="number" id="weight" step="any" min="1" placeholder="Input your weight in pounds (lbs)"
+          aria-label="Weight in pounds" />
+      </div>
+
+      <div class="field-group">
+        <label for="height" class="visually-hidden">Height in centimeters</label>
+        <input type="number" id="height" step="any" min="1" placeholder="Input your height in Centimetres (cm)"
+          aria-label="Height in centimeters" />
+      </div>
+
+      <div id="diagrop" class="result-box" role="status" aria-live="polite">
+        <h2 id="head-text"></h2>
+        <p id="diag"></p>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <div class="classic">
+      <button id="btn-calc" type="button">Calculate</button>
+      <button id="btn-clr" type="button">Clear</button>
     </div>
+  </main>
 
-    <footer>
-      <p>Designed & Developed by Barbwire Dev (Bd)</p>
-      copyright &copy; 2023 Bd.
-    </footer>
+  <footer>
+    <p>Designed &amp; Developed by Success</p>
+    <p class="copy">Copyright &copy; 2023 Bd.</p>
+  </footer>
 
-    <script src="./script.js"></script>
-  </body>
+  <script src="./script.js"></script>
+</body>
+
 </html>
